@@ -1,0 +1,179 @@
+.login{
+  z-index: 2;
+  position:absolute;
+  width: 350px;
+  border-radius: 5px;
+  height: 500px;
+  background: white;
+  box-shadow: 0px 0px 5px #333333;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -175px;
+  transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s;	/* Safari 和 Chrome */
+  -o-transition: all 1s; /* Opera */
+}
+
+.login-top{
+  text-align: center;
+  font-size: 24px;
+  margin-top: 100px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  color: #333333;
+  margin-bottom: 50px;
+}
+
+.login-center{
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  margin-bottom: 10px;
+}
+
+.login-center-img{
+  width: 15px;
+  height: 15px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.login-center-img img{
+  width: 100%;
+}
+
+.login-center-input{
+  float: left;
+  width: 300px;
+  margin-left: 15px;
+  height: 30px;
+  position: relative;
+}
+
+.login-center-input input{
+  z-index: 2;
+  transition: all 0.5s;
+  padding-left: 10px;
+  color: #333333;
+  width: 300px;
+  height: 30px;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+}
+
+.login-center-input input:focus{
+  border: 2px solid dodgerblue;
+}
+
+.login-center-input-text{
+  background: white;
+  padding: 0 5px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  height: 20px;
+  top: 50%;
+  margin-top: -10px;
+  font-size: 14px;
+  font-weight: bold;
+  left: 5px;
+  color: dodgerblue;
+  line-height: 20px;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;	/* Firefox 4 */
+  -webkit-transition: all 0.5s;	/* Safari 和 Chrome */
+  -o-transition: all 0.5s; /* Opera */
+}
+
+.login-center-input input:focus~.login-center-input-text{
+  top: 0;
+  z-index: 3;
+  opacity: 1;
+  margin-top: -15px;
+}
+
+.login-center-textarea{
+  float: left;
+  height: 100px; 
+  margin-left: 15px;
+  height: 30px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.login-center-textarea textarea{
+  z-index: 2;
+  transition: all 0.5s;
+  padding-left: 10px;
+  color: #333333;
+  width: 300px;
+  height: 150px;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+}
+
+.login-center-textarea textarea:focus{
+  border: 2px solid dodgerblue;
+}
+
+.login-center-textarea-text{
+  background: white;
+  padding: 0 5px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  height: 20px;
+  top: 50%;
+  margin-top: -10px;
+  font-size: 14px;
+  font-weight: bold;
+  left: 5px;
+  color: dodgerblue;
+  line-height: 20px;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.login-center-textarea textarea:focus~.login-center-textarea-text{
+  top: 0;
+  z-index: 3;
+  opacity: 1;
+  margin-top: -15px;
+}
+
+.login.active{
+  -webkit-animation: login-small 0.8s; 
+  animation: login-small 0.8s;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode:forwards;
+}
+
+.login-button{cursor: pointer;
+  width: 250px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background-color: dodgerblue;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 50px;
+  color: white;
+}

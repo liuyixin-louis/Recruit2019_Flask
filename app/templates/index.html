@@ -1,0 +1,345 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="msc_test">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="华南理工大学微软学生俱乐部网站 Website of SCUTMSC">
+    <meta name="keywords" content="华南理工大学, 微软学生俱乐部, SCUT, MSC, 华南理工大学微软学生俱乐部, SCUTMSC">
+    <meta name="author" content="Charlotte Wong">
+    <link rel="icon" href="{{ url_for('static',filename='img/msc-logo.png') }}">
+    <title>华南理工大学微软学生俱乐部</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- load bootstrap widget -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <!-- load bootstrap font -->
+
+    <link href="{{ url_for('static',filename='css/carousel.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/offcanvas.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/divide.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/recruit.css') }}" rel="stylesheet">
+    <!-- <link href="./css/cover.css" rel="stylesheet"> -->
+
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            padding-top: 50px;
+        }
+    </style>
+
+    <script src="http://cdn.bootcss.com/angular.js/1.2.16/angular.min.js"></script><!-- load angular -->
+
+
+</head>
+
+<body ng-controller="mainController">
+
+<!-- Top anchor -->
+<div id="topAnchor"></div>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#index">SCUT 微软学生俱乐部</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#index">首页</a></li>
+                <li><a href="#activity">活动</a></li>
+                <li><a href="#about">关于</a></li>
+                <!--<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#signin">登录</a></li>
+                <li><a href="#signup">注册</a></li>
+                <li class="active"><a href="">报名<span class="sr-only">(current)</span></a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<!-- Blank division -->
+<div class="divide"></div>
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="container marketing">
+    <!-- CONTENT -->
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-9">
+            <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">报名链接</button>
+            </p><!--/toggle nav-->
+            <div class="jumbotron">
+                <h2>欢迎加入</h2>
+                <h1>SCUT MSC!</h1>
+                <p>请同学们在下列表单中填写个人信息并点击完成填写，即可参加华南理工大学微软学生俱乐部2019年度秋季招新。没时间解释了! 快上车 ( </p>
+            </div><!--/jumbotron-->
+            <form method="post" >
+                <div class="row" style="text-align: center">
+                    <!-- <div class="col-xs-6 col-lg-12"> -->
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img src="{{ url_for('static',filename='img/bianhao.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input type="text" name="id" value="" placeholder="学号" onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='学号'" ng-model="userBody.id"/>
+                            <div class="login-center-input-text">学号</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img
+                                src="{{ url_for('static',filename='img/zhenshixingming.png') }}"/></div>
+                        <div class="login-center-input">
+                            <input type="text" name="" value="" placeholder="姓名" onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='姓名'" ng-model="userBody.name"/>
+                            <div class="login-center-input-text">姓名</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img
+                                src="{{ url_for('static',filename='img/tongxingbie.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input type="text" name="" value="" placeholder="性别" onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='性别'" ng-model="userBody.gender"/>
+                            <div class="login-center-input-text">性别</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <!-- </div> /.col-xs-6.col-lg-4-->
+                    <!-- <div class="col-xs-6 col-lg-12"> -->
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img src="{{ url_for('static',filename='img/nianji.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input type="text" name="" value="" placeholder="年级 (请填写数字如: 2019)"
+                                   onfocus="this.placeholder=''" onblur="this.placeholder='年级 (请填写数字如: 2019)'"
+                                   ng-model="userBody.grade"/>
+                            <div class="login-center-input-text">年级</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img src="{{ url_for('static',filename='img/xiaoqu.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input type="text" name="" value="" placeholder="校区 (E.g.大学城校区)"
+                                   onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='校区 (E.g.大学城校区)'" ng-model="userBody.campus"/>
+                            <div class="login-center-input-text">校区</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img src="{{ url_for('static',filename='img/xueyuan.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input type="text" name="" value="" placeholder="学院 (E.g.软件学院)"
+                                   onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='学院 (E.g.软件学院)'" ng-model="userBody.college"/>
+                            <div class="login-center-input-text">学院</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img
+                                src="{{ url_for('static',filename='img/jigouguanli.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input type="text" name="" value="" placeholder="专业 (E.g.软件工程)"
+                                   onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='专业 (E.g.软件工程)'" ng-model="userBody.major"/>
+                            <div class="login-center-input-text">专业</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <!-- </div> /.col-xs-6.col-lg-4-->
+                    <!-- <div class="col-xs-6 col-lg-12"> -->
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img src="{{ url_for('static',filename='img/dizhi.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input type="text" name="" value="" placeholder="住址 (E.g.C10-101)"
+                                   onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='住址 (E.g.C10-101)'" ng-model="userBody.address"/>
+                            <div class="login-center-input-text">住址</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img src="{{ url_for('static',filename='img/dianhua.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input type="text" name="" value="" placeholder="手机 (请留意&回复面试短信哦~)"
+                                   onfocus="this.placeholder=''" onblur="this.placeholder='手机 (请留意并回复面试短信~)'"
+                                   ng-model="userBody.phone"/>
+                            <div class="login-center-input-text">手机</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img src="{{ url_for('static',filename='img/youxiang.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input id='email' type="email" name="email" value="" placeholder="邮箱 (请留意&回复面试邮件哦~) "
+                                   required
+                                   onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='邮箱 (请留意并回复面试邮件~)'"
+                                   ng-model="userBody.email"/>
+{#                            <span ng-show="myForm.email.$error.email" style="color: red">必填信息，请输入正确的邮箱！</span>#}
+                            <div class="login-center-input-text">邮箱</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <!-- </div> /.col-xs-6.col-lg-4-->
+                    <!-- <div class="col-xs-6 col-lg-12"> -->
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img src="{{ url_for('static',filename='img/first.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input type="text" name="" value="" placeholder="第一志愿" onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='第一志愿'" ng-model="userBody.first_choice"/>
+                            <div class="login-center-input-text">第一志愿</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img src="{{ url_for('static',filename='img/second.png') }}"/>
+                        </div>
+                        <div class="login-center-input">
+                            <input type="text" name="" value="" placeholder="第二志愿" onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='第二志愿'" ng-model="userBody.second_choice"/>
+                            <div class="login-center-input-text">第二志愿</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <!-- </div> /.col-xs-6.col-lg-4-->
+                    <!-- <div class="col-xs-6 col-lg-12"> -->
+                    <div class="login-center clearfix">
+                        <div class="login-center-img"><img src="{{ url_for('static',filename='img/jieshao.png') }}"/>
+                        </div>
+                        <div class="login-center-textarea">
+                        <textarea rows="7" name="" value="" cols="200" placeholder="自我介绍 (E.g.学习能力、已有基础…)"
+                                  onfocus="this.placeholder=''" onblur="this.placeholder='自我介绍 (E.g.学习能力、已有基础…)'"
+                                  ng-model="userBody.introduction"></textarea>
+                            <div class="login-center-textarea-text">自我介绍</div>
+                        </div>
+                    </div>
+                    <div class="divide"></div>
+                    <!-- </div> /.col-xs-6.col-lg-4-->
+
+                    <!-- <div class="col-xs-6 col-lg-12"> -->
+                    <div class="login-center clearfix">
+                        <img src="{{ url_for('static',filename='img/ms-logo.png') }}"/>
+                        <p style="font-weight: bold">予力众生 成就非凡
+                        </p>
+                        <p><a class="btn btn-default" role="button" type="submit" ng-click="enroll()">完成填写
+                            &raquo;</a></p>
+                    </div>
+                    <div class="divide"></div>
+                    <!-- </div> /.col-xs-6.col-lg-4-->
+
+                </div><!--/row-->
+            </form>
+
+        </div><!--/.col-xs-12.col-sm-9-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="list-group">
+                <a href="#recruit2019" class="list-group-item active">2019年度秋季招新报名填表</a>
+                <!--<a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>-->
+            </div>
+        </div><!--/.sidebar-offcanvas-->
+    </div><!--/row-->
+
+    <!-- Line division -->
+    <hr>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#topAnchor">Back to top</a></p>
+        <p>&copy; 2019 SCUT MSC, Org. &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></p>
+    </footer>
+
+</div><!-- /.container -->
+
+<!-- SPELLS -->
+<script>
+
+    {##}
+    {#    function checkEmail() {#}
+    {#        var email = document.getElementById("email").value;#}
+    {#        //编写邮箱的正则  #}
+    {#        var reg = /^[a-z0-9]\w+@[a-z0-9]+(\.[a-z]{2,3}){1,2}$/i;#}
+    {#        if (reg.test(email)) {#}
+    {#            //符合规则  #}
+    {#            return true;#}
+    {#        } else {#}
+    {#            //不符合规则  #}
+    {#            return false;#}
+    {#        }#}
+    {#    }#}
+    {##}
+    {#    function checkAll() {#}
+    {#        var email = checkEmail();#}
+    {#var name = checkName();#}
+    {#var id = checkId();#}
+    {#var password = checkPassword();#}
+    {#var same = checkSame();#}
+    {#        if (email) {#}
+    {#            return true;#}
+    {#        } else {#}
+    {#            return false;#}
+    {#        }#}
+    {##}
+    {##}
+    {#    }#}
+
+</script>
+<script src="{{ url_for('static',filename='js/controllers/users.js') }}"></script>
+<!-- load up our user controller -->
+<script src="{{ url_for('static',filename='js/services/users.js') }}"></script> <!-- load our user service -->
+<script src="{{ url_for('static',filename='js/core.js') }}"></script> <!-- load our main application -->
+
+</body>
+</html>

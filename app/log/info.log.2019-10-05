@@ -1,0 +1,92 @@
+2019-10-05 15:56:24,361 - INFO - 2019-10-05 15:56:24.361336:Query user User(id='1',name='None') success!
+2019-10-05 16:00:59,924 - INFO - 2019-10-05 16:00:59.924655:Try to get the data of a user whose id ==2
+2019-10-05 16:01:00,016 - INFO - {}:Query user {} failed!
+2019-10-05 16:06:32,588 - INFO - 2019-10-05 16:06:32.588039:Try to get the data of a user whose id ==1
+2019-10-05 16:06:32,671 - INFO - Query user User(id='1',name='None') success!
+2019-10-05 16:06:39,884 - INFO - 2019-10-05 16:06:39.884520:Try to get the data of a user whose id ==3
+2019-10-05 16:06:39,891 - INFO - Query user User(id='3',name='123') success!
+2019-10-05 16:06:45,782 - INFO - 2019-10-05 16:06:45.782666:Try to get the data of a user whose id ==2
+2019-10-05 16:06:45,843 - INFO - Query user (id==2) failed!
+2019-10-05 16:06:55,715 - INFO - 2019-10-05 16:06:55.715059:Try to get the data of a user whose id ==4
+2019-10-05 16:06:55,722 - INFO - Query user User(id='4',name='123') success!
+2019-10-05 16:07:05,615 - INFO - 2019-10-05 16:07:05.615621:Try to get the data of a user whose id ==None
+2019-10-05 16:07:05,622 - INFO - Query user (id==None) failed!
+2019-10-05 16:07:12,090 - INFO - 2019-10-05 16:07:12.090068:Try to get the data of a user whose id ==None
+2019-10-05 16:07:12,096 - INFO - Query user (id==None) failed!
+2019-10-05 16:08:32,962 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 16:08:33,039 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='4',name='123'), User(id='5',name='123')] success!
+2019-10-05 16:08:54,107 - INFO - Try to get the data of a user whose id ==1
+2019-10-05 16:08:54,116 - INFO - Query user User(id='1',name='None') success!
+2019-10-05 16:09:22,485 - INFO - Delete user User(id='4',name='123') success!
+2019-10-05 16:09:41,787 - INFO - Edit user User(id='5',name='louis') success!
+2019-10-05 16:09:51,772 - INFO - Try to get the data of a user whose id ==5
+2019-10-05 16:09:51,781 - INFO - Query user User(id='5',name='louis') success!
+2019-10-05 16:10:57,356 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 16:10:57,415 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312')] success!
+2019-10-05 16:10:57,419 - INFO - Add user <function user_add at 0x000002E065815708> success!
+2019-10-05 16:14:43,764 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 16:14:43,843 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312')] success!
+2019-10-05 16:14:43,863 - INFO - Add user <function user_add at 0x000001E051DD5708> success!
+2019-10-05 21:56:55,755 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 21:56:55,866 - ERROR - Delete user failed!Err:(sqlite3.OperationalError) no such table: users
+[SQL: INSERT INTO users (name, gender, campus, grade, college, major, address, phone, email, first_choice, second_choice, introduction, create_time, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('123', '123', '123', '123', '123', '123', '123', '123', '123@qq.com', '123', '123', '123', '2019-10-05 21:56:55.865742', 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2019-10-05 22:17:24,374 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:17:24,428 - ERROR - Query all users failed!Err:(sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.gender AS users_gender, users.campus AS users_campus, users.grade AS users_grade, users.college AS users_college, users.major AS users_major, users.address AS users_address, users.phone AS users_phone, users.email AS users_email, users.first_choice AS users_first_choice, users.second_choice AS users_second_choice, users.introduction AS users_introduction, users.create_time AS users_create_time, users.state AS users_state 
+FROM users 
+WHERE 1 = 1 ORDER BY users.create_time]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2019-10-05 22:17:24,429 - ERROR - Delete user failed!Err:(sqlite3.OperationalError) no such table: users
+[SQL: INSERT INTO users (name, gender, campus, grade, college, major, address, phone, email, first_choice, second_choice, introduction, create_time, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('123', '123', '123', '123', '123', '123', '123', '123', 'zxcxzcz@qq.com', '123', '123', '123', '2019-10-05 22:17:24.427013', 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2019-10-05 22:19:51,166 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:19:51,207 - ERROR - Delete user failed!Err:(sqlite3.OperationalError) no such table: users
+[SQL: INSERT INTO users (name, gender, campus, grade, college, major, address, phone, email, first_choice, second_choice, introduction, create_time, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('123', '123', '123', '123', '123', '123', '123', '123', 'zxcxzcz@qq.com', '132', '123', '123', '2019-10-05 22:19:51.204083', 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2019-10-05 22:19:51,208 - ERROR - Query all users failed!Err:(sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.gender AS users_gender, users.campus AS users_campus, users.grade AS users_grade, users.college AS users_college, users.major AS users_major, users.address AS users_address, users.phone AS users_phone, users.email AS users_email, users.first_choice AS users_first_choice, users.second_choice AS users_second_choice, users.introduction AS users_introduction, users.create_time AS users_create_time, users.state AS users_state 
+FROM users 
+WHERE 1 = 1 ORDER BY users.create_time]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2019-10-05 22:21:42,356 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:21:42,395 - ERROR - Query all users failed!Err:(sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.gender AS users_gender, users.campus AS users_campus, users.grade AS users_grade, users.college AS users_college, users.major AS users_major, users.address AS users_address, users.phone AS users_phone, users.email AS users_email, users.first_choice AS users_first_choice, users.second_choice AS users_second_choice, users.introduction AS users_introduction, users.create_time AS users_create_time, users.state AS users_state 
+FROM users 
+WHERE 1 = 1 ORDER BY users.create_time]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2019-10-05 22:21:42,395 - ERROR - Delete user failed!Err:(sqlite3.OperationalError) no such table: users
+[SQL: INSERT INTO users (name, gender, campus, grade, college, major, address, phone, email, first_choice, second_choice, introduction, create_time, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('123', '123', '123', '123', '123', '123', '123', '123', 'zxcxzcz@qq.com', '123', '123', '123', '2019-10-05 22:21:42.394327', 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+2019-10-05 22:22:42,701 - ERROR - Delete user failed!Err:'name'
+2019-10-05 22:22:42,720 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:22:42,767 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312'), User(id='7',name='123')] success!
+2019-10-05 22:23:44,854 - ERROR - Delete user failed!Err:'name'
+2019-10-05 22:23:44,876 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:23:44,932 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312'), User(id='7',name='123')] success!
+2019-10-05 22:26:42,989 - ERROR - Delete user failed!Err:'gender'
+2019-10-05 22:26:43,007 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:26:43,058 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312'), User(id='7',name='123')] success!
+2019-10-05 22:29:04,319 - ERROR - Delete user failed!Err:'name'
+2019-10-05 22:29:04,350 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:29:04,397 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312'), User(id='7',name='123')] success!
+2019-10-05 22:30:49,030 - ERROR - Delete user failed!Err:'college'
+2019-10-05 22:30:49,071 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:30:49,081 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312'), User(id='7',name='123')] success!
+2019-10-05 22:32:29,252 - ERROR - Delete user failed!Err:'name'
+2019-10-05 22:32:29,263 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:32:29,328 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312'), User(id='7',name='123')] success!
+2019-10-05 22:33:16,133 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:33:16,186 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312'), User(id='7',name='123')] success!
+2019-10-05 22:35:44,516 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:35:44,577 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312'), User(id='7',name='123')] success!
+2019-10-05 22:39:00,905 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:39:00,936 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312'), User(id='7',name='123')] success!
+2019-10-05 22:39:00,956 - INFO - Add user <function user_add at 0x000001AECA4065E8> success!
+2019-10-05 22:47:20,233 - INFO - Try to get the data of a user whose id ==None
+2019-10-05 22:47:20,286 - INFO - Query all users [User(id='1',name='None'), User(id='3',name='123'), User(id='5',name='louis'), User(id='6',name='12312'), User(id='7',name='123'), User(id='123',name='123')] success!
+2019-10-05 22:47:20,302 - INFO - Add user <function user_add at 0x00000287C6CC65E8> success!
