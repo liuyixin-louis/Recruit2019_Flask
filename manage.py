@@ -20,4 +20,4 @@ migrate = Migrate(app,db)
 manager.add_command('db',MigrateCommand)
 
 
-app.run(port=1234)
+app.run(port=3030)
