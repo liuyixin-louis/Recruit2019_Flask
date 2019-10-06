@@ -41,7 +41,7 @@
 ### (Optional) Set up a [virtual environment](https://docs.python.org/3/library/venv.html)
 
 ### 1. Get the code
-    git clone https://github.com/afourmy/flask-gentelella.git
+    git clone https://github.com/liuyixin-louis/Recruit2019_Flask.git
     cd Recruit2019_Flask
 
 ### 2. Install requirements
