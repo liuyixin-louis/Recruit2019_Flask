@@ -7,7 +7,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/env" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.7.4 virtualenv at D:\project_workplace\flask_exam\flask_sign_up\env" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.7 (flask_sign_up)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">

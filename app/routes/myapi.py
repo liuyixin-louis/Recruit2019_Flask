@@ -4,7 +4,7 @@ from app.models import db
 from app.models.user import User
 from app.utility.log_tool import logger
 
-api_blueprint =Blueprint('api',__name__)
+api_blueprint =Blueprint('api',__name__,static_folder='static')
 
 # api开发
 

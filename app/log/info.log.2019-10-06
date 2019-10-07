@@ -1,0 +1,12 @@
+2019-10-06 13:20:31,288 - INFO - Add user <function user_add at 0x000001C4B09DC798> success!
+2019-10-06 13:22:14,539 - INFO - Add user <function user_add at 0x0000015C15D8C798> success!
+2019-10-06 13:35:18,593 - INFO - Add user <function user_add at 0x0000020FDE2FA798> success!
+2019-10-06 14:22:57,371 - INFO - Add user <function user_add at 0x0000012C3AE690D8> success!
+2019-10-06 14:23:58,731 - INFO - Add user <function user_add at 0x0000012C3AE690D8> success!
+2019-10-06 14:27:36,921 - INFO - Try to get the data of a user whose id ==1421242
+2019-10-06 14:27:36,981 - INFO - Query user User(id='1421242',name='41243') success!
+2019-10-06 14:27:51,356 - INFO - Try to get the data of a user whose id ==123
+2019-10-06 14:27:51,364 - INFO - Query user User(id='123',name='123') success!
+2019-10-06 14:28:47,708 - INFO - Edit user User(id='123',name='louis') success!
+2019-10-06 14:29:10,477 - INFO - Delete user User(id='123',name='louis') success!
+2019-10-06 21:36:40,696 - INFO - Add user <function user_add at 0x0000020D6B8BC798> success!

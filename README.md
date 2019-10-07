@@ -41,7 +41,7 @@
 ### (Optional) Set up a [virtual environment](https://docs.python.org/3/library/venv.html)
 
 ### 1. Get the code
-    git clone https://github.com/afourmy/flask-gentelella.git
+    git clone https://github.com/liuyixin-louis/Recruit2019_Flask.git
     cd Recruit2019_Flask
 
 ### 2. Install requirements
@@ -53,12 +53,41 @@
     (Powershell) $env:FLASK_APP = ".\manage.py"
 
 ### 4. Run the application
-    flask run --host=0.0.0.0
+    flask run --port=3000
 
-### 4. Go to http://server_address:3030/
+### 4. Go to http://localhost:3000/
 
 
-#### Todo
-- [ ] 前端
+##程序运行截图
+
+- 1.程序启动：
+    ![avatar](doc/1.png)
+    ![avatar](doc/2.png)
+- 2.连接数据库并创建数据表：
+    ![avatar](doc/3.png)
+    ![avatar](doc/4.png)
+    ![avatar](doc/5.png)
+    
+- 3.对数据库的增删查改及后端接口：
+
+    增：
+    ![avatar](doc/2.1.png)
+    ![avatar](doc/6.png)
+    查：
+    ![avatar](doc/7.png)
+    ![avatar](doc/8.png)
+    改：
+    ![avatar](doc/9.png)
+    删：
+    ![avatar](doc/10.png)
+
+## Todo
+- [ ] 前端（表单验证）
 - [ ] 数据库迁移
 - [ ] 云部署
+
+
+
+
+
+

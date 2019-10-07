@@ -6,6 +6,6 @@ def init_app(app):
     # app.register_blueprint(frontend_blueprint)
     # app.register_blueprint(api_blueprint)
     app.register_blueprint(frontend_blueprint)
-    app.register_blueprint(api_blueprint, url_prefix='/api')
+    app.register_blueprint(api_blueprint, url_prefix='/api',static_folder='app/static')
 
 # ...

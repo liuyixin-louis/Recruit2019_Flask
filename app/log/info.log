@@ -1,11 +1,9 @@
-2019-10-06 13:20:31,288 - INFO - Add user <function user_add at 0x000001C4B09DC798> success!
-2019-10-06 13:22:14,539 - INFO - Add user <function user_add at 0x0000015C15D8C798> success!
-2019-10-06 13:35:18,593 - INFO - Add user <function user_add at 0x0000020FDE2FA798> success!
-2019-10-06 14:22:57,371 - INFO - Add user <function user_add at 0x0000012C3AE690D8> success!
-2019-10-06 14:23:58,731 - INFO - Add user <function user_add at 0x0000012C3AE690D8> success!
-2019-10-06 14:27:36,921 - INFO - Try to get the data of a user whose id ==1421242
-2019-10-06 14:27:36,981 - INFO - Query user User(id='1421242',name='41243') success!
-2019-10-06 14:27:51,356 - INFO - Try to get the data of a user whose id ==123
-2019-10-06 14:27:51,364 - INFO - Query user User(id='123',name='123') success!
-2019-10-06 14:28:47,708 - INFO - Edit user User(id='123',name='louis') success!
-2019-10-06 14:29:10,477 - INFO - Delete user User(id='123',name='louis') success!
+2019-10-07 10:48:50,206 - INFO - Add user <function user_add at 0x000001DF2EFFA3A8> success!
+2019-10-07 11:02:06,355 - INFO - Add user <function user_add at 0x00000236DDCBC318> success!
+2019-10-07 11:15:44,676 - INFO - Add user <function user_add at 0x000001C8E24A9048> success!
+2019-10-07 11:17:15,313 - INFO - Try to get the data of a user whose id ==12421412
+2019-10-07 11:17:15,320 - INFO - Query user User(id='12421412',name='1231') success!
+2019-10-07 11:18:01,951 - INFO - Query all users [User(id='124214',name='1231'), User(id='12421412',name='1231')] success!
+2019-10-07 11:19:05,230 - INFO - Edit user User(id='12421412',name='louis') success!
+2019-10-07 11:19:37,656 - INFO - Delete user User(id='12421412',name='louis') success!
+2019-10-07 11:21:49,818 - INFO - Add user <function user_add at 0x000001C8E24A9048> success!
